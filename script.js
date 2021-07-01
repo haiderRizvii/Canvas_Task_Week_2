@@ -11,6 +11,7 @@ const img = new Image();
 
 console.log(cls); */
 
+//Image Uploader function.
 const uploadImage = (e) => {
   reader.onload = () => {
     img.onload = () => {
