@@ -32,6 +32,10 @@ label {
   font-size: 1.5rem;
 }
 
+.small {
+  font-size: 1rem;
+}
+
 .textInput {
   border: none;
   padding: 10px 20px;
