@@ -50,6 +50,9 @@ const writeOnFoot = (e) => {
 
 //Combined Function to write on Click event.
 const writeOnImage = () => {
+  headColorPicker();
+  footColorPicker();
+
   writeOnHead();
   writeOnFoot();
 };
@@ -80,11 +83,3 @@ const footColorPicker = (e) => {
   footColor = document.getElementById('footColorPicker').value;
   console.log(footColor);
 };
-
-headColor = document
-  .getElementById('headColorPicker')
-  .addEventListener('click', headColorPicker);
-
-footColor = document
-  .getElementById('footColorPicker')
-  .addEventListener('click', footColorPicker);
