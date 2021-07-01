@@ -16,7 +16,7 @@ const uploadImage = (e) => {
   reader.onload = () => {
     img.onload = () => {
       canvas.width = img.width;
-      img.height = canvas.height;
+      canvas.height = img.height;
       ctx.drawImage(img, 0, 0);
     };
     img.src = reader.result;
