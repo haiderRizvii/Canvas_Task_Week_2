@@ -26,17 +26,15 @@ const uploadImage = (e) => {
 const imageLoader = document.getElementById('uploader');
 imageLoader.addEventListener('change', uploadImage);
 
+//Write on header and footer..
 const writeOnHead = (e) => {
   const textHead = document.getElementById('overText').value;
-  //const textFoot = document.getElementById('belowText').value;
-  //console.log(textFoot);
   console.log(textHead);
   ctx.font = 'italic 35px Arial';
   ctx.textAlign = 'center';
   ctx.textBaseline = 'middle';
   ctx.fillStyle = headColor;
   ctx.fillText(textHead, canvas.width / 2, 50);
-  //ctx.fillText(textFoot, canvas.width / 2, canvas.height - 20);
 };
 
 const writeOnFoot = (e) => {
@@ -49,6 +47,7 @@ const writeOnFoot = (e) => {
   ctx.fillText(textFoot, canvas.width / 2, canvas.height - 20);
 };
 
+//Combined Function to write on Click event.
 const writeOnImage = () => {
   writeOnHead();
   writeOnFoot();
@@ -56,6 +55,7 @@ const writeOnImage = () => {
 
 document.getElementById('writeOnImage').addEventListener('click', writeOnImage);
 
+//Download image..
 function download() {
   const image = canvas.toDataURL();
   const link = document.createElement('a');
@@ -66,6 +66,7 @@ function download() {
 
 document.getElementById('download').addEventListener('click', download);
 
+//Color Picking of Header and Footer.
 let headColor = '#111';
 let footColor = '#111';
 
